@@ -1,0 +1,405 @@
+a.container *::before *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+
+  overflow-y: hidden;
+  background: linear-gradient(-100deg, #100426, #29197a, #32328c);
+  font-family: "Sarabun", serif;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+:root {
+  --swiper-theme-color: rgb(212, 199, 255);
+  --swiper-navigation-size: 60px;
+}
+
+.swiper {
+  
+  width: 100vw;
+  min-height: 100vh;
+  
+}
+
+/* Makes vertical scrollbar transparent */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.hidden {
+  // opacity: 0;
+  left: -90%;
+}
+
+.img, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12, .img13, .img14, .img15, .img16, .img17, .img18 {
+  position: absolute;
+  border-radius: 2rem;
+  z-index: 2;
+  transition: ease-in-out all 0.35s;
+}
+
+.img:hover {
+  cursor: pointer;
+  transform: scale(115%);
+}
+
+section .line .img {
+  height: 1000px;
+  width: 350px;
+
+  top: 100px;
+  right: 200px;
+  
+  padding: 3px;
+}
+
+section .line .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.line {
+  display: inline-block;
+ 
+  position: relative;
+  width: 10vw;
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+  transition-delay: 0.2s;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+}
+
+
+
+/* Logo */
+.section {
+  padding: 15px;
+}
+
+.section a img {
+  cursor: pointer;
+}
+
+/* Navbar */
+ul {
+  margin: auto;
+}
+
+li {
+  padding-top: 5px;
+  float: center;
+  text-align: left;
+}
+
+li::marker {
+  font-size: 1rem;
+}
+
+a {
+  cursor: default;
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  transition: ease-in-out all 0.35s;
+}
+
+
+/* Headers */
+.headerImage img {
+  display: block;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  // filter: blur(0.8px);
+}
+
+/* Footers */
+.footer {
+  display: block;
+  position: relative;
+  z-index: 2;
+  top: -18%;
+  left: -3%;
+}
+
+/* Pop-up window */
+.section1, .section2, .section3, .section4, .section5, .section6,
+.section7, .section8, .section9, .section10, .section11, .section12, .section13, .section14, .section15,
+.section16, .section17, .section18 {
+  display: none;
+  z-index: 1;
+
+  justify-content: center;
+
+  position: absolute;
+
+  -webkit-animation: fadeOut 1.5s;
+          animation: fadeOut 1.5s;
+  overflow: auto;
+  transform: translate(10%, 0%);
+  background-color: rgb(42, 45, 62);
+  box-shadow: 0px 0px 20px rgb(255, 255, 255);
+  outline: #000;
+  width: 50vw;
+  height: 80vh;
+  left: 20%;
+  top: 10%;
+  border: 1px solid #dadada;
+  border-radius: 30px;
+}
+
+.container > button {
+  position: absolute;
+
+  top: -10px;
+  right: 0px;
+
+
+  z-index: 2;
+  background-color: transparent;
+  border-radius: 1em;
+
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(255, 38, 38);
+  border-style: none;
+}
+
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container {
+  display: none;
+
+  object-fit: contain;
+
+  position: fixed;
+  z-index: 2;
+  top: 7%;
+  right: 22.5%;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 .5rem;
+}
+
+.carousel-button:focus {
+  color: white;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.section1, .section2, .section3, .section4, .section5, .section6,
+.section7, .section8, .section9, .section10, .section11, .section12, .section13, .section14, .section15,
+.section16, .section17, .section18, p {
+  padding: 10px;
+  color: white;
+  padding: 10px;
+  font-size: 1.4rem;
+
+  text-align: left;
+}
+
+// .section1, .section2, .section3, .section4, .section5, .section6,
+// .section7, .section8, .section9, .section10, .section11, .section12, .section13, .section14, .section15,
+// .section16, .section17, .section18, h1 {
+//   color: white;
+//   // text-align: center;
+//   color: rgb(196, 192, 255);
+//   font-size: 4rem;
+// }
+
+.section1, .section2, .section3, .section4, .section5, .section6,
+.section7, .section8, .section9, .section10, .section11, .section12, .section13, .section14, .section15,
+.section16, .section17, .section18, h6 {
+  color: rgb(196, 192, 255);
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.section1, .section2, .section3, .section4, .section5, .section6,
+.section7, .section8, .section9, .section10, .section11, .section12, .section13, .section14, .section15,
+.section16, .section17, .section18, img {
+  cursor: auto;
+  padding: 0px;
+}
+
+.section img {
+  width: 140px;
+  -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+video {
+  position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 50vw;
+  height: 50vh;
+}
+
+.features {
+  position: relative;
+  padding-left: 55px;
+  padding-bottom: 55px;
+  border: 2px solid;
+  border-color: rgb(69, 19, 144);
+  border-style: hidden;
+  border-radius: 1em;
+  border-width: 2px;
+  // border-radius: 95px 155px 148px 103px/88px 95px 130px 203px;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    overflow: hidden;
+  }
+  .img, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12, .img13, .img14, .img15, .img16, .img17, .img18 {
+    width: 140%;
+    border-radius: 1rem;
+  }
+  .line {
+      padding-right: 0px;
+      margin: 20px;
+  }
+  
+
+  .swiper {
+    width: 200vw;
+    max-height: 100vh;
+  }
+
+  section .line .img {
+    width: 280px;
+    height: 800px;
+    top: 300px;
+    right: 20px;
+  }
+
+  .carousel-button {
+    top: 65%;
+    font-size: 2.5rem;
+  }
+
+  .section1, .section2, .section3, .section4, .section5, .section6,
+  .section7, .section8, .section9, .section10, .section11, .section12, .section13, .section14, .section15,
+  .section16, .section17, .section18 {
+      display: none;
+      position: fixed;
+      -webkit-animation: fadeOut 1.5s;
+              animation: fadeOut 1.5s;
+      overflow: auto;
+      transform: translate(10%, 0%);
+      background-color: rgb(42, 45, 62);
+      box-shadow: 0px 0px 20px rgb(255, 255, 255);
+      outline: #000;
+      width: 80vw;
+      height: 60vh;
+      left: 0%;
+      top: 20%;
+      border: 1px solid #dadada;
+      border-radius: 30px;
+  }
+
+  .section1, .section2, .section3, .section4, .section5, .section6,
+  .section7, .section8, .section9, .section10, .section11, .section12, .section13, .section14, .section15,
+  .section16, .section17, .section18, h6 {
+  color: rgb(196, 192, 255);
+  font-size: 1.8rem;
+  text-align: center;
+  }
+
+  .features {
+      border-style: none;
+  }
+
+}
+
+
+@media only screen and (min-width: 800px) {
+  section .img img {
+    width: 50%;
+  }
+
+  .swiper {
+    width: 100vw;
+    max-height: 100vh;
+  }
+
+  
+
+  .carousel-button {
+    top: 40%;
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .img, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12, .img13, .img14, .img15, .img16, .img17, .img18 {
+    width: 110%;
+  }
+  
+}
+
+h6 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+}
+
+
+.section ul {
+  list-style: none;
+  float: right;
+
+  padding: 5px;
+}
+
+.section li a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.section a:hover {
+  opacity: 0.7;
+  color: rgb(145, 103, 251);
+  transition: ease-in-out 0.5s;
+}
